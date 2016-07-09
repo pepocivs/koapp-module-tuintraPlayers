@@ -1,0 +1,8 @@
+{
+  "tuintraplayers.error-loading": "Opps! There was a problem loading data!",
+  "tuintraplayers.error-not-set": "Domain not configured",
+  "tuintraplayers.position": "Position",
+  "tuintraplayers.birthDate": "Birth Date",
+  "tuintraplayers.gender": "Gender",
+  "tuintraplayers.nationality": "Nationality"
+}

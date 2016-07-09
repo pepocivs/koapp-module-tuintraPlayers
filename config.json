@@ -1,0 +1,119 @@
+{
+  "name": "Tuintra Players",
+  "identifier": "tuintraplayers",
+  "icon": "face",
+  "type": "A",
+  "version": "1.0.0",
+  "author": "PepoCivs",
+  "description": {
+    "es-ES" : "",
+    "en-US" : ""
+  },
+  "descriptionShort": {
+    "es-ES" : "",
+    "en-US" : ""
+  },
+  "documentation": {
+    "es-ES": "",
+    "en-US": ""
+  },
+  "category": [
+    "social"
+  ],
+  "platforms" : [
+    "android",
+    "ios",
+    "windows"
+  ],
+  "price": 0,
+  "canContain": false,
+  "images" : {
+    "list" : "modules/tuintraplayers/images/tuintraplayers_list.png",
+    "screenshots" : [
+      "modules/tuintraplayers/images/tuintraplayers_screenshot.png",
+      "modules/tuintraplayers/images/tuintraplayers_screenshot2.png"
+    ],
+    "popover" : "modules/tuintraplayers/images/tuintraplayers_popover.png",
+    "banner" : "modules/tuintraplayers/images/tuintraplayers_popover.png",
+    "logo" : "modules/tuintraplayers/images/tuintraplayers_icon.png"
+  },
+  "showOn": {
+    "menu": true,
+    "market": true,
+    "dragDrop": true
+  },
+  "requires": {},
+  "canContain": false,
+  "searchable": true,
+  "view": "modules/tuintraplayers/index.html",
+  "files": [
+    "modules/tuintraplayers/controller.js",
+    "modules/tuintraplayers/style.css"
+  ],
+  "libs": [{
+    "bower": { "moment": "^2.11.2" },
+    "src": "bower_components/moment/moment.js"
+  }],
+  "scope": {
+    "clubDomain": "",
+    "playerId": "",
+    "teamId": "",
+    "birthYear": "",
+    "gender": ""
+  },
+  "config": [
+    {
+      "type": "input",
+      "key": "domain",
+      "templateOptions": {
+        "description": "Tuintra Domain or Subdomain",
+        "pattern": "(https?://)([/\\w.()-]*).*",
+        "required": true,
+        "label": "Tuintra domain"
+      }
+    },
+    {
+      "type": "input",
+      "key": "playerId",
+      "templateOptions": {
+        "description": "Player identifier (blank to see all)",
+        "pattern": "^[0-9]+$",
+        "required": false,
+        "label": "Player Id"
+      }
+    },
+    {
+      "type": "input",
+      "key": "teamId",
+      "templateOptions": {
+        "description": "Team identifier (blank to see all)",
+        "pattern": "^[0-9]+$",
+        "required": true,
+        "label": "Team Id"
+      }
+    },
+    {
+      "type": "input",
+      "key": "birthYear",
+      "templateOptions": {
+        "description": "Birth year of the player (blank to see all)",
+        "pattern": "^[0-9]+$",
+        "required": false,
+        "label": "Birth Year"
+      }
+    },
+    {
+      "type": "select",
+      "key": "gender",
+      "templateOptions": {
+        "description": "Select gender to filter",
+        "label": "Gender",
+        "options": [
+          {"name": "All",   "value": "" },
+          {"name": "Male",    "value": "M" },
+          {"name": "Female",  "value": "F" }
+        ]
+      }
+    }
+  ]
+}
