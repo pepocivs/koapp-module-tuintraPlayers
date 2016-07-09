@@ -1,0 +1,44 @@
+<div ng-controller="tuintraplayersCtrl" class="module tuintraplayers">
+
+  <div class='iframeLoading' ng-if="isBusy">
+    <div class='transitionloader'>
+    </div>
+  </div>
+
+  <koa-item ng-if="error">{{error}}</koa-item>
+
+  <div ng-if="!error">
+    <koa-grid cell-space="5px" columns="2" ng-if="!isBusy">
+      <koa-card ng-repeat="player in players" heading="{{player.name.public}}" image="{{player.playerData.picture || player.coachData.picture}}">
+        <div class="card-content">
+          <koa-item class="number">#{{player.playerData.number }}</koa-item>
+          <koa-item>
+            <koa-item-body two-line>
+              <div secondary>{{ 'tuintraplayers.birthDate' | translate }}:</div>
+              <div>{{player.birthDate}}</div>
+            </koa-item-body>
+          </koa-item>
+          <koa-item>
+            <koa-item-body two-line>
+              <div secondary>{{ 'tuintraplayers.gender' | translate }}:</div>
+              <div>{{player.gender}}</div>
+            </koa-item-body>
+          </koa-item>
+          <koa-item>
+            <koa-item-body two-line>
+              <div secondary>{{ 'tuintraplayers.nationality' | translate }}:</div>
+              <div>{{player.nationality.name}}</div>
+            </koa-item-body>
+          </koa-item>
+          <koa-item ng-repeat="team in player.teams" ng-if="team._id == tuintraplayers.modulescope.teamId">
+            <koa-item-body two-line>
+              <div secondary>{{ 'tuintraplayers.position' | translate }}:</div>
+              <div>{{team.rol}}</div>
+            </koa-item-body>
+          </koa-item>
+        </div>
+      </koa-card>
+    </koa-grid>
+  </div>
+
+</div>

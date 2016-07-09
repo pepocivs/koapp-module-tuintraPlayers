@@ -1,0 +1,8 @@
+{
+  "tuintraplayers.error-loading": "Ups! Ha habido un problema cargando los datos!",
+  "tuintraplayers.error-not-set": "No se ha configurado el dominio",
+  "tuintraplayers.position": "Posición",
+  "tuintraplayers.birthDate": "Fecha de Nacimiento",
+  "tuintraplayers.gender": "Sexo",
+  "tuintraplayers.nationality": "Nacionalidad"
+}
